@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Antd from 'ant-design-vue';
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 import { FormModel } from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import Property from "./components/Property";

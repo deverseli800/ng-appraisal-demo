@@ -5,6 +5,7 @@
     </a-page-header>
     <a-col :span="16">
       <a-card title="Site Description" >
+        <div>{{info}}</div>
         <a-form-model :model="form"  layout="vertical">
           <a-form-model-item label="As Is General Property Condition">
             <a-select placeholder="please select condition">
@@ -106,16 +107,29 @@
 
 
 <script>
-export default {
+  import axios from 'axios';
+
+  export default {
   name: 'Property',
   props: {
     formName: String
+  },
+  mounted() {
+    console.log('come on and mount the horse!')
+    axios
+      .get('http://127.0.0.1:3000/posts')
+      .then(response => {
+
+        console.log('response');
+        this.info = response
+      })
   },
   data() {
     return {
       disabled: true,
       labelCol: { span: 4 },
       wrapperCol: { span: 14 },
+      info: [],
       form: {
         name: '',
         conditionOptions: ['Fair', 'Satisfactory', 'Good', 'Excellent'],
