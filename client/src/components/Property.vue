@@ -78,7 +78,7 @@
             </a-radio-group>
           </a-form-model-item>
           <a-form-model-item label="Structural System">
-            <a-radio-group  :disabled="disabled" v-model="siteInspection.foundation">
+            <a-radio-group  :disabled="disabled" v-model="siteInspection.structuralSystem">
               <a-radio value="1">
                 Wood joists and masonry
               </a-radio>

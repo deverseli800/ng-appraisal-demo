@@ -1,6 +1,6 @@
 <template>
     <a-layout id="components-layout-demo-fixed-sider">
-        <navigation address="522 Dean Street"/>
+        <navigation address="535 Dean Street"/>
         <a-layout :style="{ marginLeft: '200px'}">
             <a-layout-header :style="{ background: '#fff', padding: '0' }">
                 <key-details></key-details>
@@ -9,7 +9,7 @@
                 <router-view></router-view>
             </a-layout-content>
             <a-layout-footer :style="{ textAlign: 'center' }">
-                Ant Design ©2018 Created by Ant UED
+                ©2020 Bowery
             </a-layout-footer>
         </a-layout>
     </a-layout>
