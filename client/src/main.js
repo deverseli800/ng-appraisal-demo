@@ -1,14 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
 import Antd from 'ant-design-vue';
-import VueRouter from 'vue-router';
 import { FormModel } from 'ant-design-vue';
+import VueRouter from 'vue-router';
 import 'ant-design-vue/dist/antd.css';
 import Property from "./components/Property";
 import Photos from "./components/Photos"
 import CapRateConclusion from "./components/CapRateConclusion";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 Vue.use(Antd);
 Vue.use(FormModel);
@@ -20,11 +19,9 @@ const routes = [
   { path: '/capRateConclusion', component: CapRateConclusion }
 ]
 
-const router = new VueRouter({
+export const router = new VueRouter({
   routes // short for `routes: routes`
 })
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app')
+export default Vue
+
