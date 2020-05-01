@@ -6,6 +6,8 @@ import 'ant-design-vue/dist/antd.css';
 import Property from "./components/Property";
 import Photos from "./components/Photos"
 import CapRateConclusion from "./components/CapRateConclusion";
+import Report from './components/Report';
+import SiteDescriptionSection from "./components/SiteDescriptionSection";
 
 Vue.config.productionTip = false;
 
@@ -16,7 +18,13 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/photos', component: Photos },
   { path: '/propertyDescription', component: Property },
-  { path: '/capRateConclusion', component: CapRateConclusion }
+  { path: '/capRateConclusion', component: CapRateConclusion },
+  { path: '/',
+    component: Report,
+    children: [{
+      path: 'siteDescription',
+      component: SiteDescriptionSection
+    }]}
 ]
 
 export const router = new VueRouter({
