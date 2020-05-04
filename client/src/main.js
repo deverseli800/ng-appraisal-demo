@@ -8,6 +8,7 @@ import Photos from "./components/Photos"
 import CapRateConclusion from "./components/CapRateConclusion";
 import Report from './components/Report';
 import SiteDescriptionSection from "./components/SiteDescriptionSection";
+import SubjectPropertyPhotosSection from "./components/SubjectPropertyPhotosSection";
 
 Vue.config.productionTip = false;
 
@@ -21,10 +22,21 @@ const routes = [
   { path: '/capRateConclusion', component: CapRateConclusion },
   { path: '/',
     component: Report,
-    children: [{
-      path: 'siteDescription',
-      component: SiteDescriptionSection
-    }]}
+    children: [
+      {
+        path: 'siteDescription',
+        component: SiteDescriptionSection,
+        name: 'Site Description',
+        icon: 'bank'
+      },
+      {
+        path: 'subjectPropertyPhotos',
+        component: SubjectPropertyPhotosSection,
+        name: 'Subject Property Photos',
+        icon: 'bank'
+      },
+    ]},
+  { path: '*', redirect: '/siteDescription' }
 ]
 
 export const router = new VueRouter({

@@ -4,27 +4,11 @@
       <h2>{{ address }}</h2>
     </div>
     <a-menu mode="inline" :defaultSelectedKeys="['4']">
-
-      <a-menu-item key="1" v-on:bookmark-changed="getStatus">
-        <router-link to="/siteDescription">
-          <a-icon type="bank" />
-          <span class="nav-text">Site Description</span>
+      <a-menu-item v-for="item in $router.options.routes[3].children" :key="item.path">
+        <router-link :to="item.path">
+          <a-icon :type="item.icon" />
+          <span class="nav-text">{{ item.name }}</span>
         </router-link>
-      </a-menu-item>
-
-      <a-menu-item key="2">
-        <router-link to="/photos">
-          <a-icon type="camera" />
-          <span class="nav-text">Subject Property Photos</span>
-        </router-link>
-      </a-menu-item>
-      <a-menu-item key="3">
-        <a-icon type="shop" />
-        <span class="nav-text">Description of Improvements</span>
-      </a-menu-item>
-      <a-menu-item key="5">
-        <a-icon type="dollar-o" />
-        <span class="nav-text">Income Capitalization Approach</span>
       </a-menu-item>
     </a-menu>
   </a-layout-sider>
@@ -36,10 +20,5 @@ export default {
   props: {
     address : String
   },
-  methods: {
-    getStatus() {
-      console.log('ahhhh')
-    }
-  }
 }
 </script>

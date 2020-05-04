@@ -67,36 +67,35 @@
 
 <script>
   import SectionPageHeader from "./SectionPageHeader";
-
-    export default {
-      name: "SiteDescriptionSection.vue",
-      components: {
-        SectionPageHeader
+  export default {
+    name: "SiteDescriptionSection.vue",
+    components: {
+      SectionPageHeader
+    },
+    data() {
+      return {
+        reviewed: false,
+        sendButtonDisable : false,
+        bookmarkType: 'false',
+      }
+    },
+    methods: {
+      toggleReviewStatus () {
+        this.reviewed = !this.reviewed;
       },
-      data() {
-        return {
-          reviewed: false,
-          sendButtonDisable : false,
-          bookmarkType: 'false',
-        }
+      getCurrentStatus () {
+        return this.reviewed ? `Reviewed ${new Date().toISOString()}` : 'Unreviewed';
       },
-      methods: {
-        toggleReviewStatus () {
-          this.reviewed = !this.reviewed;
-        },
-        getCurrentStatus () {
-          return this.reviewed ? `Reviewed ${new Date().toISOString()}` : 'Unreviewed';
-        },
-        toggleButtonType () {
-          if (this.bookmarkType === 'primary') {
-            this.bookmarkType = 'null';
-          } else {
-            this.bookmarkType = 'primary';
-          }
-          this.$emit('bookmark-changed', 'yo')
+      toggleButtonType () {
+        if (this.bookmarkType === 'primary') {
+          this.bookmarkType = 'null';
+        } else {
+          this.bookmarkType = 'primary';
         }
+        this.$emit('bookmark-changed', 'yo')
       }
     }
+  }
 </script>
 
 <style scoped>

@@ -5,7 +5,11 @@
       <a-layout-header :style="{ background: '#fff', padding: '0' }">
         <report-header></report-header>
       </a-layout-header>
-      <a-layout-content :style="{ margin: '0', overflow: 'initial' }">
+      <a-layout-content :style="{ margin: '0 16px', overflow: 'initial' }">
+        <a-breadcrumb style="margin: 16px 0">
+          <a-breadcrumb-item>Home</a-breadcrumb-item>
+          <a-breadcrumb-item>{{routeName}}</a-breadcrumb-item>
+        </a-breadcrumb>
         <router-view></router-view>
       </a-layout-content>
       <a-layout-footer :style="{ textAlign: 'center' }">
@@ -31,6 +35,13 @@
     components: {
       ReportNavigation,
       ReportHeader
+    },
+    computed: {
+      routeName() {
+        // We will see what `params` is shortly
+        console.log('our reouter', this.$router, this.$route)
+        return this.$route.name
+      }
     },
   }
 
