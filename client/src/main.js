@@ -9,6 +9,8 @@ import CapRateConclusion from "./components/CapRateConclusion";
 import Report from './components/Report';
 import SiteDescriptionSection from "./components/SiteDescriptionSection";
 import SubjectPropertyPhotosSection from "./components/SubjectPropertyPhotosSection";
+import OperatingExpenseAnalysisSection from "./components/OperatingExpenseAnalysisSection";
+import StabilizedIncomeAndExpensesSection from "./components/StabilizedIncomeAndExpensesSection";
 
 Vue.config.productionTip = false;
 
@@ -33,10 +35,22 @@ const routes = [
         path: 'subjectPropertyPhotos',
         component: SubjectPropertyPhotosSection,
         name: 'Subject Property Photos',
-        icon: 'bank'
+        icon: 'camera'
+      },
+      {
+        path: 'operatingExpenseAnalysis',
+        component: OperatingExpenseAnalysisSection,
+        name: 'Operating Exepense Analysis',
+        icon: 'pie-chart'
+      },
+      {
+        path: 'stabilizedIncomeAndExpenses',
+        component: StabilizedIncomeAndExpensesSection,
+        name: 'Stabilized Income and Expenses',
+        icon: 'dollar'
       },
     ]},
-  { path: '*', redirect: '/siteDescription' }
+  { path: '/*', redirect: '/siteDescription' }
 ]
 
 export const router = new VueRouter({

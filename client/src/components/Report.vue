@@ -25,6 +25,10 @@
     background: rgba(255, 255, 255, 0.2);
     margin: 16px;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #3F65AB;
+  }
 </style>
 <script>
   import ReportNavigation from "./ReportNavigation";

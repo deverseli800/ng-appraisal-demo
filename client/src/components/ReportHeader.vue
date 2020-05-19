@@ -54,6 +54,9 @@
               <a-menu-item key="2">
                 Rate This Appraisal
               </a-menu-item>
+              <a-menu-item key="2">
+                Download pdf
+              </a-menu-item>
             </a-menu>
             <a-button> Actions <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -98,5 +101,9 @@ export default {
   }
   a {
     color: #42b983;
+  }
+
+  .ant-dropdown-menu {
+    max-width: 250px;
   }
 </style>

@@ -8,6 +8,7 @@ module.exports = {
                     'link-color': '#4160D3',
                     'border-radius-base': '2px',
                     'font-family': 'Nunito Sans',
+                    'heading-color': '#4160D3',
                 },
                 javascriptEnabled: true,
             },
