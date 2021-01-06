@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.5.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "single-spa-vue": "^1.5.2",
     "systemjs-webpack-interop": "^1.1.0",
